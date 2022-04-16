@@ -43,7 +43,7 @@ export default {
     addStudent() {
       // found how to do regex test here
       // https://stackoverflow.com/questions/6603015/check-whether-a-string-matches-a-regex-in-js
-      let starIDRegex = new RegExp("^[a-zA-Z]{2}[0-9]{4}[a-zA-Z]{2}$")
+      let starIDRegex = new RegExp("^[A-Z]{2}[0-9]{4}[A-Z]{2}$")
       this.errors=[]
 
       if (!this.newStudentName) {
@@ -54,7 +54,7 @@ export default {
       }
       if (!starIDRegex.test(this.newStarID)) {
         this.errors.push("StartID must have AA####BB format. ")
-        console.log(starIDRegex.test(this.newStarID))
+        // console.log(starIDRegex.test(this.newStarID))
       }
       // found how to do this here
       // https://catalins.tech/array-of-objects-contains-a-value-in-javascript
