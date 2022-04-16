@@ -1,0 +1,18 @@
+{
+  "name": "student-sign-in-api",
+  "description": "vue and express app",
+  "author": {
+    "name": "Marty M."
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.2"
+  }
+}
