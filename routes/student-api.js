@@ -57,12 +57,10 @@ router.delete("/students/:id", function (req,res,next) {
 
     Student.destroy({where: {id:studentID}})
         .then( (rowsDeleted) => {
-            let numberOfRowsDeleted = rowsDeleted[0]
-
-            if (numberOfRowsDeleted === 1) {
+            console.log(rowsDeleted)
+            if (rowsDeleted === 1) {
                 return res.send("ok")
             } else {
-                //console.log(numberOfRowsModified)
                 return res.status(404).json(['Not Found'])
             }
         }).catch(err => next(err.errors))

@@ -1,4 +1,5 @@
 <template>
+  <h1 id="title-header">Student Sign-in</h1>
   <new-student-form v-on:student-added="newStudentAdded"></new-student-form>
   <student-table
       v-bind:students="students"
@@ -61,7 +62,7 @@ export default {
       this.$student_api.deleteStudent(student.id).then(() => {
         this.updateStudents()
         this.mostRecentStudent = {} // clear welcome/goodbye message
-      }).catch(() => alert("Unable to delete student."))
+      }).catch((err) => alert(`Unable to delete student. ${err.message}` ))
     }
   }
 }
@@ -74,7 +75,9 @@ export default {
 th, tr {
   width: 33%;
 }
-
+#title-header {
+  text-align: center;
+}
 
 [v-cloak] {
   display: none;
