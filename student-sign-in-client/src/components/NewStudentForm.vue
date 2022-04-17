@@ -65,7 +65,7 @@ export default {
         let student = {name: this.newStudentName, starID: this.newStarID, present: false}
         this.newStarID = ""
         this.newStudentName = ""
-        // TODO emit message to parent with new student
+        // emit message to parent with new student
         this.$emit("student-added",student)
 
       }

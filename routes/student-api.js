@@ -7,7 +7,8 @@ let router = express.Router()
 
 router.get("/students", function (req,res,next) {
     // did this before setting up heroku app. looked at the lab before starting....
-    Student.findAll( {order:['present','starID']} ).then( students => {
+    Student.findAll( {order:['present',
+        db.Sequelize.fn('lower',db.Sequelize.col('name'))]}).then( students => {
         return res.json(students)
     }).catch(err => next(err))
 })

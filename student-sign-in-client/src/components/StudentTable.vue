@@ -24,7 +24,7 @@
         >
         </student-row>
 
-        <!-- TODO create table rows
+        <!-- create table rows
         Each row will have a checkbox, bound to the app's data
         When the checkbox is checked/unchecked, the student will be signed in/out -->
 
